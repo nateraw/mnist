@@ -1,2 +1,5 @@
 pytorch-lightning>=1.0.4
 torchvision==0.8.1
+tensorflow
+tensorflow-datasets
+scikit-learn
