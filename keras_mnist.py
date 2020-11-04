@@ -66,7 +66,7 @@ def parse_args(args=None):
     parser.add_argument('--max_epochs', type=int, default=5)
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--seed', type=int, default=42)
-    parser.add_argument('--data_dir', type=str, default='.tfds_data/')
+    parser.add_argument('--data_dir', type=str, default='.data/')
     parser.add_argument('--logdir', type=str, default='./lightning_logs/keras/')
     return parser.parse_args(args)
 
@@ -95,7 +95,7 @@ def main(args=None):
     # Generate predictions (probabilities -- the output of the last layer)
     # on new data using `predict`
     print("Generate predictions for 3 samples")
-    predictions = model.predict(x_test[:3])
+    predictions = model.predict(test_data[0][:3])
     print("predictions shape:", predictions.shape)
 
 
